@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "@langchain/core": "^1.2.9",
+    "langchain": "^1.5.10"
+  },
+  "name": "multi-source-rag",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "@types/node": "^26.4.0",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Laraib1806-Ahmad/multi-source-rag.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Laraib1806-Ahmad/multi-source-rag/issues"
+  },
+  "homepage": "https://github.com/Laraib1806-Ahmad/multi-source-rag#readme"
+}
