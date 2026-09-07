@@ -17,3 +17,14 @@ export async function getVectorStore() {
     index: chromaClient,
   });
 }
+
+export async function getDocumentsBySource(source: string, limit = 6) {
+  const client = getChromaClient();
+  const collection = await client.getOrCreateCollection({ name: "multi-source-rag" });
+  const result = await collection.get({ where: { source }, limit });
+
+  return result.documents.map((doc, i) => ({
+    text: doc,
+    metadata: result.metadatas[i],
+  }));
+}

@@ -21,21 +21,19 @@ const model = new ChatGroq({
   apiKey: env.groqApiKey,
 });
 
-export async function getRagChain() {
+
+export async function getRagChain(source?: string) {
   const vectorStore = await getVectorStore();
-  const retriever = vectorStore.asRetriever(4);
+  const retriever = source
+    ? vectorStore.asRetriever({ k: 4, filter: { source } })
+    : vectorStore.asRetriever({ k: 4 });
 
   return RunnableSequence.from([
     {
       context: async (input: { question: string }) => {
-  const docs = await retriever.invoke(input.question);
-  console.log("Retrieved docs count:", docs.length);
-
-  const context = docs.map((d) => d.pageContent).join("\n\n");
-  console.log("Context being sent to prompt:\n", context);
-
-  return context;
-},
+        const docs = await retriever.invoke(input.question);
+        return docs.map((d) => d.pageContent).join("\n\n");
+      },
       question: (input: { question: string }) => input.question,
     },
     prompt,
