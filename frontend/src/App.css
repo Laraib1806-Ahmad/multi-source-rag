@@ -1,0 +1,31 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #faf8f5; color: #3a3a3a; }
+
+.page { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
+.back-link { color: #a68a64; text-decoration: none; font-size: 14px; }
+
+.hero { text-align: center; margin-bottom: 40px; }
+.hero h1 { font-size: 32px; font-weight: 600; color: #4a4a4a; }
+.hero p { color: #777; max-width: 500px; margin: 12px auto; }
+.examples { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 20px; }
+.chip { background: #f0e9e0; color: #8a6d4f; padding: 8px 14px; border-radius: 20px; font-size: 13px; }
+
+.doc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 24px 0 36px; }
+.doc-card { background: white; border-radius: 14px; padding: 16px; box-shadow: 0 2px 10px rgba(0,0,0,0.04); font-size: 13px; line-height: 1.5; }
+.citation { display: block; margin-top: 10px; font-size: 12px; color: #a68a64; text-decoration: none; }
+.citation.muted { color: #b3b3b3; }
+
+.chat-area { background: white; border-radius: 16px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+.input-row { display: flex; gap: 8px; }
+.input-row input { flex: 1; padding: 12px 16px; border: 1px solid #eee; border-radius: 10px; font-size: 14px; background: #fbfaf8; }
+.input-row button { padding: 12px 22px; border: none; border-radius: 10px; background: #c9a876; color: white; cursor: pointer; font-size: 14px; }
+.input-row button:disabled { opacity: 0.6; }
+.answer { margin-top: 16px; white-space: pre-wrap; line-height: 1.6; }
+.images { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px; }
+.images img { width: 130px; height: 130px; object-fit: cover; border-radius: 10px; }
+
+.bottom-nav { text-align: center; margin-top: 48px; }
+.bottom-nav p { color: #999; font-size: 13px; }
+.nav-buttons { display: flex; justify-content: center; gap: 12px; margin-top: 10px; }
+.nav-btn { padding: 12px 24px; background: #f0e9e0; color: #6b5641; border-radius: 12px; text-decoration: none; font-size: 14px; }
+.nav-btn:hover { background: #e6dccb; }
