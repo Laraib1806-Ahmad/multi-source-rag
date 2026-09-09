@@ -2,7 +2,7 @@ import { Document } from "@langchain/core/documents";
 import { env } from "../config/env";
 
 export async function loadAnycrapItems(): Promise<Document[]> {
-  const res = await fetch("https://anycrap.shop/api/v1/products?per_page=100", {
+  const res = await fetch("https://anycrap.shop/api/v1/products?per_page=60", {
     headers: {
       Authorization: `Bearer ${env.anycrapApiKey}`,
     },

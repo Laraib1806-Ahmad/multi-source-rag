@@ -18,7 +18,7 @@ export default function Home() {
     <div className="page">
       <div className="hero">
         <h1>Multi-Source RAG Assistant</h1>
-        <p>Ask me anything — I pull answers from three different live data sources: Harry Potter characters, daily horoscopes, and invented gadgets.</p>
+        <p>Ask me anything <br /> I pull answers from three different live data sources: Harry Potter characters, daily horoscopes, and invented gadgets.</p>
         <div className="examples">
           {EXAMPLES.map((q, i) => <span className="chip" key={i}>{q}</span>)}
         </div>
