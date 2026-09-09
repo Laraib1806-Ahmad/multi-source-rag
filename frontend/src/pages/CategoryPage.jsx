@@ -1,19 +1,12 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import ChatBox from "../components/ChatBox";
-
-const ALL = [
-  { path: "/potterdb", label: "Harry Potter" },
-  { path: "/cosmyday", label: "Horoscope" },
-  { path: "/anycrap", label: "Anycrap" },
-];
-
 export default function CategoryPage({ source, label }) {
   const [docs, setDocs] = useState([]);
   const others = ALL.filter((c) => c.label !== label);
 
   useEffect(() => {
-   fetch(`${import.meta.env.VITE_API_URL}/documents?source=` + source)
+    fetch(`${import.meta.env.VITE_API_URL}/documents?source=` + source)
+      .then((res) => res.json())
+      .then((data) => setDocs(data.docs));
+  }, [source]);
 
   return (
     <div className="page">

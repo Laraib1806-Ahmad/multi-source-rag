@@ -12,7 +12,11 @@ export default function ChatBox({ source, label }) {
     setAnswer("");
     setImages([]);
 
-    const res = await fetch(`${import.meta.env.VITE_API_URL}/ask`, {...});
+const res = await fetch(`${import.meta.env.VITE_API_URL}/ask`, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ question, source }),
+});
     const data = await res.json();
     setAnswer(data.answer);
     setImages(data.images || []);
