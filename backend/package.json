@@ -27,7 +27,8 @@
   "scripts": {
     "dev": "tsx index.ts",
     "ingest": "tsx src/ingest.ts",
-    "server": "tsx src/server.ts"
+    "server": "tsx src/server.ts",
+    "start": "tsx src/server.ts"
   },
   "repository": {
     "type": "git",
