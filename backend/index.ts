@@ -1,6 +1,7 @@
 import { loadAllDocuments } from "./src/loaders";
 import { getRagChain } from "./src/pipeline/chain";
 import { splitDocuments } from "./src/pipeline/splitter";
+import { embeddings } from "./src/pipeline/embeddings";
 
 async function main() {
   // const docs = await loadAllDocuments();
@@ -26,3 +27,11 @@ main();
 // }
 
 // main();
+
+
+async function test() {
+  const result = await embeddings.embedQuery("hello world");
+  console.log(result.length, result.slice(0, 5));
+}
+
+test();

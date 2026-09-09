@@ -1,5 +1,7 @@
-import { OllamaEmbeddings } from "@langchain/ollama";
+import { GoogleGenerativeAIEmbeddings } from "@langchain/google-genai";
+import { env } from "../config/env";
 
-export const embeddings = new OllamaEmbeddings({
-  model: "nomic-embed-text",
+export const embeddings = new GoogleGenerativeAIEmbeddings({
+  apiKey: env.googleApiKey,
+  model: "gemini-embedding-001",
 });

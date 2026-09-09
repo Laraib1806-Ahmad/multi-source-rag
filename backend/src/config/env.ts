@@ -7,4 +7,5 @@ export const env = {
   chromaDatabase: process.env.CHROMA_DATABASE,
   chromaApiKey: process.env.CHROMA_API_KEY,
   groqApiKey : process.env.GROQ_API_KEY,
+  googleApiKey: process.env.GOOGLE_API_KEY,
 };
