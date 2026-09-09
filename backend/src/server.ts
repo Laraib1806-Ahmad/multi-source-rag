@@ -1,10 +1,13 @@
 import express from "express";
 import { getRagChain } from "./pipeline/chain";
 import { getVectorStore, getDocumentsBySource } from "./pipeline/vectorstore";
+import cors from "cors";
 
 const app = express();
 app.use(express.json());
 app.use(express.static("public"));
+app.use(cors());
+
 
 app.get("/documents", async (req, res) => {
   const source = req.query.source as string;

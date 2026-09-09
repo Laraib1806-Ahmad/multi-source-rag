@@ -13,10 +13,7 @@ export default function CategoryPage({ source, label }) {
   const others = ALL.filter((c) => c.label !== label);
 
   useEffect(() => {
-    fetch("/documents?source=" + source)
-      .then((res) => res.json())
-      .then((data) => setDocs(data.docs));
-  }, [source]);
+   fetch(`${import.meta.env.VITE_API_URL}/documents?source=` + source)
 
   return (
     <div className="page">
