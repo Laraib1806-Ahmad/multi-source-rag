@@ -8,4 +8,13 @@ export const env = {
   chromaApiKey: process.env.CHROMA_API_KEY,
   groqApiKey : process.env.GROQ_API_KEY,
   googleApiKey: process.env.GOOGLE_API_KEY,
+
+  
 };
+
+console.log("DEBUG:", {
+  tenant: env.chromaTenant,
+  database: env.chromaDatabase,
+  apiKeyLength: env.chromaApiKey?.length,
+  apiKeyStart: env.chromaApiKey?.slice(0, 8),
+});
