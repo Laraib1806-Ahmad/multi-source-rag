@@ -27,10 +27,10 @@
     "typescript": "^7.0.2"
   },
   "scripts": {
-    "dev": "tsx index.ts",
+    "dev": "node api.js && tsx index.ts",
     "ingest": "tsx src/ingest.ts",
     "server": "tsx src/server.ts",
-    "start": "tsx src/server.ts"
+    "start": "node api.js && tsx src/server.ts"
   },
   "repository": {
     "type": "git",
